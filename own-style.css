@@ -87,17 +87,9 @@ header{
     justify-content: center;
 }
 
-.card-body-iniciarsesion{
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 32px;
-    padding: 5%;
-}
-
 .form-iniciarsesion{
-    width: 50%;
-    padding-right: 5%;
-    padding-top: 9%;
-    padding-left: 5%;
+    width: 60%;
+    padding: 5% 5%;
 }
 
 input[type="text"], input[type="password"]{
@@ -114,9 +106,8 @@ input[type="text"], input[type="password"]{
   input[type="checkbox"] {
     background-color: #CBCBCB;
   }
-  
-  input[type="checkbox"]:after {
-  }
-  
-  input[type="checkbox"]:checked:after {
-  }
+
+  /* Media resposive */
+@media (min-width: 500px) and (max-width: 800px) {
+
+}
