@@ -18,6 +18,20 @@ $custom-colors: (
 //Importar los temas creados
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+//Crear customizacion de font
+$custom-font-weights: (
+  "light": 300,
+  "normal": 400,
+  "bold": 700,
+  "extra-bold": 900
+);
+//agregarlas a la clase para su uso en codigo
+@each $name, $weight in $custom-font-weights {
+  .font-weight-#{$name} {
+    font-weight: $weight;
+  }
+}
+
 //Configuracion de resposividad de breakpoints
 $grid-breakpoints: (
   xs: 0,

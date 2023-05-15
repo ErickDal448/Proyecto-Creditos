@@ -1,3 +1,9 @@
+/* clases personalizadas */
+.btn-normal {
+    padding: 5px 26px;
+    font-size: 24px;
+  }
+
 /*Entrar*/
 header{
     font-family: 'Source Sans 3', sans-serif;
@@ -94,3 +100,23 @@ header{
     padding-left: 5%;
 }
 
+input[type="text"], input[type="password"]{
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 8%;
+    font-size: 20px;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: #E3C351;
+  }
+  
+  input[type="checkbox"] {
+    background-color: #CBCBCB;
+  }
+  
+  input[type="checkbox"]:after {
+  }
+  
+  input[type="checkbox"]:checked:after {
+  }
