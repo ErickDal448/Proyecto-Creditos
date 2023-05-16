@@ -1,9 +1,9 @@
 /* Compatibilidad con github pages */
 /* enlace al apartado inicio */
 function goToOtherFile() {
-    let path = "/Inicio.html";
-    if (window.location.hostname === "ErickDal448.github.io") {
-      path = "/Proyecto-Creditos" + path;
+    let path = '/Inicio.html';
+    if (window.location.hostname === 'ErickDal448.github.io') {
+      path = '/Proyecto-Creditos' + path;
     }
     console.log(path);
     window.location.href = path;
