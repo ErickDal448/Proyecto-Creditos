@@ -1,4 +1,12 @@
 /* Compatibilidad con github pages */
+/* direccionamiento de archivos js de bootstrap */
+function getBootstrapBundlePath() {
+  let path = '/Bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+  if (window.location.hostname === 'erickdal448.github.io') {
+    path = '/Proyecto-Creditos' + path;
+  }
+  return path;
+}
 /* enlace al apartado inicio */
 function goToOtherFile() {
     console.log(window.location.hostname);
