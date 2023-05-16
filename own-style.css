@@ -74,6 +74,10 @@ header{
     font-family: 'Source Sans 3', sans-serif;
     font-size: 32px;
     font-weight: bold;
+    text-align: center;
+}
+.card-body p{
+    text-align: center;
 }
 
 /*Iniciar Sesion*/
@@ -107,7 +111,61 @@ input[type="text"], input[type="password"]{
     background-color: #CBCBCB;
   }
 
-  /* Media resposive */
-@media (min-width: 500px) and (max-width: 800px) {
+  .div-enviarsesion{
+    display: flex; 
+    justify-content: flex-end;
+  }
 
+  /* Media resposive */
+@media (min-width: 1020px){
+    #Dropdown{
+        display: none;
+    }
+    #li-dropdown{
+        display: none;
+    }
+}
+@media (max-width: 1020px) {
+    #div-menu{
+        width: 190px;
+    }
+
+    #header-lista{
+        display: none;
+    }
+    
+    #li-dropdown{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #Dropdown{
+        font-size: 32px;
+        font-weight: bold;
+        padding-right: 10%;
+    }
+    #drop-menu{
+        background-color: #CBCBCB;
+
+    }
+
+    @media (max-width: 580px){
+        .p-logoUAS{
+            display: none;
+        }
+        .card-body img{
+            display: none;
+        }
+
+        /* iniciar sesion*/
+        #imagen-busqueda{
+            display: none;
+        }
+        #card-iniciarsesion{
+            justify-content: center;
+        }
+        .div-enviarsesion{
+            justify-content: center;
+        }
+    }
 }

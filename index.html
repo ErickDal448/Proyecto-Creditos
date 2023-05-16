@@ -11,19 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
+
+    <script src="/Bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 <body>
     <header>
+         <!-- navbar resposiva -->
         <nav class="navbar bg-cabeza bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" id="cabeza-a">
+            <div class="container-fluid" style="flex-wrap: nowrap;">
+                <a class="navbar-brand  col-md-6" href="#" id="cabeza-a">
                     <img src="Imagenes/Logo UAS.png" alt="Logo" id="logoUAS">
-                    <div>
+                    <div class="p-logoUAS">
                         <p>Módulo de créditos</p><p>Extracurriculares</p>
                     </div>           
                 </a>
-                <div class="nav-item" style="width: 50%;" >
-                    <ul class="navbar-nav me-auto mb-lg-0" ID="header-lista" >
+                <div class="nav-item  col-md-6" id="div-menu">
+                    <ul class="navbar-nav me-auto mb-lg-0  col-md-12" ID="header-lista" >
                         <li class="nav-text nav-fondo">
                             <a class="nav-link" href="IniciarSesion.html">INICIAR SESION</a>
                         </li>
@@ -32,16 +35,27 @@
                                 <img src="Imagenes/Icon Perfil.png" alt="Icono de perfil">
                             </a>
                         </li>
+                    </ul>
+                    <li class="nav-item dropdown  col-md-12" id="li-dropdown">
+                        <a class="nav-link dropdown-toggle text-fondo" id="Dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="navbar-toggler-icon"></span></a>
+                        <ul class="dropdown-menu" id="drop-menu">
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled text-pulsar"> ENTRAR </a></li>
+                            <li><a class="dropdown-item" href="IniciarSesion.html">INICIAR SESIÓN</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
                 </div>
             </div>
         </nav>
     </header>
+
     <section class="container-fluid" id="section-info">
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">Bienvenido a la pagina de creditos extracurriculares</h5>
               <p class="card-text"> Para ver tus 
-                creditos favor de iniciar sesion o crear una cuenta .</p>
+                creditos favor de iniciar sesion.</p>
               <img src="Imagenes/img inicio.png" class="card-img-top" alt="img inicio" style="padding-left:5%;padding-right:5%;">
             </div>
         </div>

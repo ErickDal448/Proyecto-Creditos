@@ -12,35 +12,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
 
+    <script src="/Bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="js/functions.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar bg-cabeza bg-body-tertiary">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand" id="cabeza-a"  >
-                    <img src="Imagenes/Logo UAS.png" alt="Logo" id="logoUAS">
-                    <div>
-                        <p>Módulo de créditos</p><p>Extracurriculares</p>
-                    </div>           
-                </a>
-                <div class="nav-item" style="width: 50%;" >
-                    <ul class="navbar-nav me-auto mb-lg-0" ID="header-lista" >
-                        <li class="nav-text nav-fondo">
-                            <a class="nav-link" style="color:#E3C351;">INICIAR SESIÓN</a>
-                        </li>
-                        <li>
-                            <img src="Imagenes/Icon Perfil.png" alt="Icono de perfil" id="profile-icon">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <!-- navbar resposiva -->
+       <nav class="navbar bg-cabeza bg-body-tertiary">
+           <div class="container-fluid" style="flex-wrap: nowrap;">
+               <a class="navbar-brand  col-md-6" href="#" id="cabeza-a">
+                   <img src="Imagenes/Logo UAS.png" alt="Logo" id="logoUAS">
+                   <div class="p-logoUAS">
+                       <p>Módulo de créditos</p><p>Extracurriculares</p>
+                   </div>           
+               </a>
+               <div class="nav-item  col-md-6" id="div-menu">
+                   <ul class="navbar-nav me-auto mb-lg-0  col-md-12" ID="header-lista" >
+                       <li class="nav-text nav-fondo">
+                           <a class="nav-link" href="IniciarSesion.html">INICIAR SESION</a>
+                       </li>
+                       <li>
+                           <a href="IniciarSesion.html">
+                               <img src="Imagenes/Icon Perfil.png" alt="Icono de perfil">
+                           </a>
+                       </li>
+                   </ul>
+                   <li class="nav-item dropdown  col-md-12" id="li-dropdown">
+                       <a class="nav-link dropdown-toggle text-fondo" id="Dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="navbar-toggler-icon"></span></a>
+                       <ul class="dropdown-menu" id="drop-menu">
+                           <li><hr class="dropdown-divider"></li>
+                           <li><a class="dropdown-item" href="/index.html">ENTRAR</a></li>
+                           <li><a class="dropdown-item disabled text-pulsar">INICIAR SESIÓN</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                       </ul>
+                   </li>
+               </div>
+           </div>
+       </nav>
+   </header>
 
     <section class="container-fluid" id="section-info-iniciarsesion">
         <div class="card" id="card-iniciarsesion">
-            <div class="card-body-iniciarsesion col-md-6" style="width: 40%;">
+            <div class="card-body-iniciarsesion col-md-6" id="imagen-busqueda" style="width: 40%;">
               <img src="Imagenes/Busqueda sesion.png" class="card-img-top" alt="img inicio" style="padding: 5% 5%;width:100%; height: 100%;">
             </div>
 
@@ -58,7 +71,7 @@
                     <input class="form-check-input border-dark control-label-dark" type="checkbox" role="switch" id="SeeNIP" onchange="handleCheckboxChange(this)" style="box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.25); height: 30px; width: 60px; transition: .5s;">
                     <label class="form-check-label font-weight-bold" for="SeeNIP" style="padding-left: 5px;">Ver NIP</label>
                   </div>
-                <div style="display: flex; justify-content: flex-end;">
+                <div class="div-enviarsesion" >
                     <button class="btn btn-pulsar border-dark btn-normal" type="button" onclick="goToOtherFile()" style="box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.25); border-radius: 40px; " >INICIAR SESIÓN</button>
                 </div>
             </form>
