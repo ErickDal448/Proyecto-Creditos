@@ -116,8 +116,57 @@ input[type="text"], input[type="password"]{
     justify-content: flex-end;
   }
 
+
+  /* Inicio */
+  #section-info-inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TotalP{
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  #card-iniciarsesion-1{
+    width: 40%;
+    margin-top: 0;
+    justify-content: center;
+    padding: 1% 5%;
+    text-align: center;
+    font-size: 50px;
+  }
+  #card-iniciarsesion-2{
+    width: 90%;
+    justify-content: center;
+    padding: 2% 5%;
+    text-align: center;
+    font-size: 25px;
+  }
+  .SeccionMedallas{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #BotonMedalla{
+    border-radius: 360px;
+    box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.25);
+  }
+  .progress1{
+    margin: 5px 5%;
+  }
+  .progress2{
+    height: 25px;
+    margin: 5px 5%;
+    box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.25);
+  }
+
+
   /* Media resposive */
-@media (min-width: 1020px){
+@media (min-width: 1139px){
     #Dropdown{
         display: none;
     }
@@ -125,7 +174,7 @@ input[type="text"], input[type="password"]{
         display: none;
     }
 }
-@media (max-width: 1020px) {
+@media (max-width: 1139px) {
     #div-menu{
         width: 190px;
     }

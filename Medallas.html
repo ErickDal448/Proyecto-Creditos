@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creditos-Inicio</title>
+    <title>Creditos-Perfil</title>
 
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="own-style.css"/>
@@ -12,15 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
 
-    
-    
+    <script src="js/functions.js"></script>
+    <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
 </head>
 <body>
     <header>
         <!-- navbar resposiva -->
        <nav class="navbar bg-cabeza bg-body-tertiary">
            <div class="container-fluid" style="flex-wrap: nowrap;">
-               <a class="navbar-brand  col-md-6" href="#" id="cabeza-a">
+               <a class="navbar-brand  col-md-6" href="index.html" id="cabeza-a">
                    <img src="Imagenes/LogoUAS.png" alt="Logo" id="logoUAS">
                    <div class="p-logoUAS">
                        <p>Módulo de créditos</p><p>Extracurriculares</p>
@@ -29,7 +29,7 @@
                <div class="nav-item col-md-6" id="div-menu" >
                 <ul class="navbar-nav me-auto mb-lg-0 col-md-12" ID="header-lista" >
                     <li class="nav-text">
-                        <a class="nav-link text-pulsar">INICIO</a>
+                        <a class="nav-link" href="Inicio.html">INICIO</a>
                     </li>
                     <li class="nav-text">
                         <a class="nav-link" href="Eventos.html">EVENTOS</a>
@@ -38,25 +38,22 @@
                         <a class="nav-link" href="Certificados.html">CERTIFICADOS</a>
                     </li>
                     <li class="nav-text">
-                        <a class="nav-link" href="Medallas.html">MEDALLAS</a>
+                        <a class="nav-link  text-pulsar">MEDALLAS</a>
                     </li>
                     <li class="nav-text nav-fondo">
                         <a class="nav-link" href="Perfil.html">PERFIL</a>
                     </li>
                     <li>
-                        <a href="Perfil.html">
-                            <img src="Imagenes/IconPerfil.png" alt="Icono de perfil">
-                        </a>
+                        <img src="Imagenes/IconPerfil.png" alt="Icono de perfil">
                     </li>
                 </ul>
                 <li class="nav-item dropdown  col-md-12" id="li-dropdown">
                     <a class="nav-link dropdown-toggle text-fondo" id="Dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="navbar-toggler-icon"></span></a>
                     <ul class="dropdown-menu" id="drop-menu">
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item disabled text-pulsar">INICIO</a></li>
+                        <li><a class="dropdown-item" href="Inicio.html">INICIO</a></li>
                         <li><a class="dropdown-item" href="Eventos.html">EVENTOS</a></li>
                         <li><a class="dropdown-item" href="Certificados.html">CERTIFICADOS</a></li>
-                        <li><a class="dropdown-item" href="Certificados.html">MEDALLAS</a></li>
                         <li><a class="dropdown-item" href="Perfil.html">PERFIL</a></li>
                         <li><hr class="dropdown-divider"></li>
                     </ul>
@@ -65,37 +62,5 @@
             </div>
         </nav>
    </header>
-
-   <section class="container-fluid" id="section-info-inicio">
-    <p class="TotalP">[Erick Daniel Alba Leon] Tu total de creditos son:</p>
-    <div class="card bg-pulsar" id="card-iniciarsesion-1">
-        <p class="text-dark font-weight-bold" id="CreditosTotales">35C.</p>
-    </div>
-    <div class="card" id="card-iniciarsesion-2">
-        <section class="SeccionMedallas">
-            <p>
-                <button class="btn btn-cabeza" id="BotonMedalla" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onclick="incrementProgress()">
-                <img id="button-image" src="Imagenes/FondoMedallas.png">
-                </button>
-            </p>
-            <div style="min-height: 100px;">
-                <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                    <div class="card card-body" style="width: 300px;">
-                        Info de la medalla...
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="progress progress1" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
-            <div class="progress-bar" id="progress-bar1" style="width: 0%"></div>
-        </div>
-        <div class="progress progress2" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-            <div class="progress-bar" id="progress-bar2" style="width: 0%"></div>
-        </div>
-    </div>
-</section>
-<script src="js/functions.js"></script>
-<script> document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>'); </script>
 </body>
 </html>
