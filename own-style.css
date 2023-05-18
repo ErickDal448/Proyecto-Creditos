@@ -139,7 +139,7 @@ input[type="text"], input[type="password"]{
     font-size: 50px;
   }
   #card-iniciarsesion-2{
-    width: 90%;
+    width: 80%;
     justify-content: center;
     padding: 2% 5%;
     text-align: center;
@@ -147,6 +147,9 @@ input[type="text"], input[type="password"]{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   .SeccionMedallas{
     display: inline-flex;
@@ -167,7 +170,20 @@ input[type="text"], input[type="password"]{
     box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 15px;
   }
-
+  #card-iniciarsesion-3{
+    width: 95%;
+    margin-top: 0%;
+    justify-content: center;
+    padding: 2% 5%;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .idTablaCreditos, .UnidadesTabla, .MaxTablaCreditos {
+    padding: 3% 0px;
+    }
 
   /* Media resposive */
 @media (min-width: 1139px){
@@ -218,23 +234,65 @@ input[type="text"], input[type="password"]{
         color:#E3C351;
     }
 
-    @media (max-width: 580px){
-        .p-logoUAS{
-            display: none;
-        }
-        .card-body img{
-            display: none;
-        }
+    /* Inicio */
+    #card-iniciarsesion-2{
+        width: 90%;
+        justify-content: center;
+        padding: 2% 5%;
+        text-align: center;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 60px;
+        margin-bottom: 20px;
+    }
+    #card-iniciarsesion-3{
+        width: 90%;
+        justify-content: center;
+        padding: 2% 5%;
+        text-align: center;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 60px;
+        margin-bottom: 20px;
+    }
+   
+}
+@media (max-width: 580px){
+    .p-logoUAS{
+        display: none;
+    }
+    .card-body img{
+        display: none;
+    }
 
-        /* iniciar sesion*/
-        #imagen-busqueda{
-            display: none;
-        }
-        #card-iniciarsesion{
-            justify-content: center;
-        }
-        .div-enviarsesion{
-            justify-content: center;
-        }
+    /* iniciar sesion*/
+    #imagen-busqueda{
+        display: none;
+    }
+    #card-iniciarsesion{
+        justify-content: center;
+    }
+    .div-enviarsesion{
+        justify-content: center;
+    }
+
+    /* Inicio */
+    .idTablaCreditos{
+        display: none;;
+    }
+}
+@media (max-width: 480px){
+    /* Inicio */
+    .UnidadesTabla{
+        display: none;;
+    } 
+}
+@media (max-width: 330px){
+    html{
+        width: 400px;
     }
 }
