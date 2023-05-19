@@ -112,7 +112,9 @@ function updateButtonImage() {
   });
   }); 
   // Iniciar la observación
-  observer.observe(progressBar1, { attributes: true });
+  if (progressBar1) { // Verificar si el elemento existe antes de llamar al método `observe`
+    observer.observe(progressBar1, { attributes: true });
+  }
 
   // Crear una función para establecer el valor de la barra de progreso
   function setProgress(value) {

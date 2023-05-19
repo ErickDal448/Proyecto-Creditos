@@ -12,9 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
 
-    <script src="js/functions.js"></script>
-    <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
-</head>
+    </head>
 <body>
     <header>
         <!-- navbar resposiva -->
@@ -63,7 +61,61 @@
             </div>
         </nav>
    </header>
+   <section class="container-fluid" id="section-info-inicio">
+        <div class="card" id="card-eventos">
+            <section class="filtros">
+                  <select class="form-select form-select-lg mb-3 bg-pulsar text-fondo" aria-label=".form-select-lg example" style="font-weight: 600;">
+                    <option selected>Eventos Proximos</option>
+                    <option value="2">Eventos Pasados</option>
+                    <option value="3">Eventos Realizados</option>
+                  </select>
+            </section>
 
+            <section class="EventosTablas">
+                <div class="card" id="card-lista-eventos">
+                    <div class="mapa-creditos col-md-2">
+                        <a href="https://www.google.com.mx/maps/place/Facultad+de+Inform%C3%A1tica+Culiac%C3%A1n/@24.8228459,-107.3826527,17z/data=!3m1!4b1!4m6!3m5!1s0x86bcd9f94c837fad:0xfa9e708bbd4d8e9!8m2!3d24.8228411!4d-107.3800778!16s%2Fg%2F1tgb7sy1" target="_blank" id="enlace-mapa">
+                            <button class="btn btn-cabeza" id="BotonMapa" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                </svg>
+                            </button>
+                        </a>
+                        <div class="badge bg-pulsar text-wrap font-weight-bold fs-6" style="margin-bottom: 20px; border-radius: 50px;">
+                            Creditos: 0.5C.
+                          </div>
+                    </div>
+                    
 
+                    <div class="col-md-9" id="lista-info-evento">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item AtributosEventos ">Titulo</li>
+                            <li class="list-group-item VariablesEventos">{Titulo}</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item AtributosEventos">Tipo</li>
+                            <li class="list-group-item VariablesEventos">{Tipo}</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item AtributosEventos">Duración</li>
+                            <li class="list-group-item VariablesEventos">{Duracion} </li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item AtributosEventos">Descripción</li>
+                            <li class="list-group-item VariablesEventos text-break">{Descripcion} 123456789012345678901234567890123456789012345678901234567890123456789012345678901234568790</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item AtributosEventos">Fecha</li>
+                            <li class="list-group-item VariablesEventos">{Fecha}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>  
+   </section>
+   
+
+   <script src="js/functions.js"></script>
+   <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
 </body>
 </html>

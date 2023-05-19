@@ -185,6 +185,56 @@ input[type="text"], input[type="password"]{
     padding: 3% 0px;
     }
 
+    /*Eventos*/
+    #card-eventos{
+        Padding: 2% 5%;
+    }
+    .filtros{
+        margin-top: 30px;
+    }
+
+    #card-lista-eventos{
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .mapa-creditos{
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+    }
+    #enlace-mapa{
+        margin:20px;  
+    }
+    #enlace-mapa button{
+        border-radius: 40px;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+    }
+    #enlace-mapa svg{
+        width: 50%;
+        height: 50%;
+    }
+
+    #lista-info-evento{
+        margin: 30px;
+    }
+    .AtributosEventos{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background-color: #E3C351;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .VariablesEventos{
+        background-color: antiquewhite;
+    }
   /* Media resposive */
 @media (min-width: 1139px){
     #Dropdown{
@@ -259,7 +309,12 @@ input[type="text"], input[type="password"]{
         border-radius: 60px;
         margin-bottom: 20px;
     }
-   
+   /* Eventos */
+   #card-lista-eventos {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    }
 }
 @media (max-width: 580px){
     .p-logoUAS{
@@ -283,6 +338,11 @@ input[type="text"], input[type="password"]{
     /* Inicio */
     .idTablaCreditos{
         display: none;;
+    }
+
+    /* Eventos */
+    .list-group-horizontal {
+        flex-direction: column;
     }
 }
 @media (max-width: 480px){
