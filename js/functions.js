@@ -27,7 +27,7 @@ window.onload = function() {
 }
 
 /* Conectividad con puerto swagger */
-let port = window.myPort;
+// let port = window.myPort;
 
 /* Mostrar y quitar texto del apartado número de cuenta */
 function handleInputFocusNum(input) {
