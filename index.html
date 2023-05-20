@@ -12,13 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
 
-    
+    <script>
+        let portSwager = prompt('Por favor ingrese el puerto a utilizar de swagger:');
+        window.myPort = portSwagger;
+    </script>
 </head>
 <body>
-    <script>
-        let port = prompt('Por favor ingrese el puerto a utilizar de swagger:');
-        window.myPort = port;
-    </script>
+    
     <header>
          <!-- navbar resposiva -->
         <nav class="navbar bg-cabeza bg-body-tertiary">
@@ -62,6 +62,7 @@
         </div>
     </section>
     <script src="js/functions.js"></script>
+    
     <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
 </body>
 </html>
