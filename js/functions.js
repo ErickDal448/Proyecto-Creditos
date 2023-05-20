@@ -26,6 +26,9 @@ window.onload = function() {
 //   document.getElementById('profile-icon').src = path;
 }
 
+/* Conectividad con puerto swagger */
+let port = window.myPort;
+
 /* Mostrar y quitar texto del apartado número de cuenta */
 function handleInputFocusNum(input) {
   if (input.value === "Número de cuenta") {
