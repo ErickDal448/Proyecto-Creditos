@@ -2,25 +2,26 @@
 .btn-normal {
     padding: 5px 26px;
     font-size: 24px;
-  }
+}
+.btn-small{
+    font-size: 20px;
+    width: 250px;
+}
 
 /*Entrar*/
 header{
     font-family: 'Source Sans 3', sans-serif;
 }
-
 #cabeza-a{
     align-items: center;
     display: flex;
     font-size:24px;
     color: #ffffff;
 }
-
 #logoUAS{
     width: 115px;
     height: 165px;
 }
-
 #cabeza-a p{
     font-size:32px;
     margin-bottom:-10px;
@@ -28,30 +29,25 @@ header{
     font-weight: bold;
     font-style: italic;
 }
-
 #header-lista{
     flex-direction: row;
     display: flex;
     justify-content: flex-end;
 }
-
 #header-lista li{
     padding-right: 30px;
     padding-top: 20px;
     font-size: 24px;
     font-weight: bold;
 }
-
 #header-lista li a{
     padding-top: 20px;
 }
-
 #section-info{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .card{
     width: 95%;
     background-color: #A1D8D5;
@@ -60,7 +56,6 @@ header{
     border-radius: 60px;
     box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.25);
 }
-
 .card-body{
     font-family: 'Source Sans 3', sans-serif;
     font-size: 32px;
@@ -69,7 +64,6 @@ header{
     display: flex;
     flex-direction: column;
 }
-
 .card-body h5{
     font-family: 'Source Sans 3', sans-serif;
     font-size: 32px;
@@ -84,33 +78,27 @@ header{
 #card-iniciarsesion{
     flex-direction: row;
 }
-
 #section-info-iniciarsesion{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .form-iniciarsesion{
     width: 60%;
     padding: 5% 5%;
 }
-
 input[type="text"], input[type="password"]{
     font-weight: bold;
     font-style: italic;
     padding-left: 8%;
     font-size: 20px;
   }
-
   input[type="checkbox"]:checked {
     background-color: #E3C351;
   }
-  
   input[type="checkbox"] {
     background-color: #CBCBCB;
   }
-
   .div-enviarsesion{
     display: flex; 
     justify-content: flex-end;
@@ -123,13 +111,11 @@ input[type="text"], input[type="password"]{
     flex-direction: column;
     align-items: center;
   }
-
   .TotalP{
     position: relative;
     font-weight: 500;
     margin-bottom: 0;
   }
-
   #card-iniciarsesion-1{
     width: 40%;
     margin-top: 0;
@@ -192,13 +178,11 @@ input[type="text"], input[type="password"]{
     .filtros{
         margin-top: 30px;
     }
-
     #card-lista-eventos{
         display: inline-flex;
         flex-direction: row;
         align-items: center;
     }
-
     .mapa-creditos{
         display: flex;
         display: flex;
@@ -220,7 +204,6 @@ input[type="text"], input[type="password"]{
         width: 50%;
         height: 50%;
     }
-
     #lista-info-evento{
         margin: 30px;
     }
@@ -290,7 +273,6 @@ input[type="text"], input[type="password"]{
     .VariablesCertificados{
         background-color: antiquewhite;
     }
-
     .divBtnSalirEnviarCert{
         position: relative;
         bottom: 20px;
@@ -312,6 +294,64 @@ input[type="text"], input[type="password"]{
         font-size: 25px;
         border-radius: 50px;
     }
+
+    /* Medallas */
+
+    .seccionMisMedallas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    }
+
+    /* Perfil */ 
+    #card-ver-Perfil{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .divImgPerfil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .datosPerfil{
+        padding: 40px;
+    }
+    .datosPerfil input{
+        border-radius: 40px;
+    }
+    .divBtnCerrarSesion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        
+    }
+    #btnCerrarSesion{
+        border-radius: 50px;
+        width: 250px;
+        font-size: 20px;
+        font-weight: bold; 
+        box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.25);
+    }
+    .divBtnCerrarAlert{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .divBtnCerrarAlert button{
+        border-radius: 50px;
+        font-size: 30px;
+        width: 250px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-weight: bond;
+    }
+
   /* Media resposive */
 @media (min-width: 1139px){
     #Dropdown{
@@ -414,6 +454,11 @@ input[type="text"], input[type="password"]{
         border-radius: 50px;
         padding-left: 40px;
         font-weight: bold;
+    }
+
+    /* Perfil */
+    #card-ver-Perfil{
+        flex-direction: column;
     }
 }
 @media (max-width: 580px){

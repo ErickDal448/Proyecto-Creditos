@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
 
-    <script src="js/functions.js"></script>
-    <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
+    
 </head>
 <body>
     <header>
@@ -61,5 +60,82 @@
             </div>
         </nav>
    </header>
+
+   <section class="container-fluid" id="section-info-perfil" style="display: flex   ;justify-content: center;">
+    <div class="card" id="card-ver-Perfil" style="padding: 50px;">
+        <div class="divImgPerfil col-md-3">
+            <img src="Imagenes/IconPerfil.png"> 
+            <div class="badge bg-pulsar text-wrap font-weight-bold fs-6" style="margin-bottom: 20px; border-radius: 50px; margin-top: 10px;">
+                Creditos: 0.5C.
+            </div>
+            <div>
+                <a href="Certificados.html">
+                    <button class="btn btn-pulsar border-dark btn-small" type="button" style="box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.25); border-radius: 40px; margin-bottom: 20px; " >Certificados Enviados</button>
+                </a>
+            </div>
+            <div>
+                <a href="Eventos.html">
+                    <button class="btn btn-pulsar border-dark btn-small" type="button" style="box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.25); border-radius: 40px; " >Eventos Asistidos</button>
+                </a>
+            </div>
+        </div>
+        <section class="datosPerfil col-md-9">
+            <fieldset disabled>
+                <div>
+                    <label class="form-label font-weight-bold">Nombre</label>
+                    <input type="text" class="form-control bg-pulsar text-fondo" id="formGroupExampleInput" placeholder="Nombre">
+                </div>
+                <div>
+                    <label class="form-label font-weight-bold disabled">Número de Cuenta</label>
+                    <input type="text" class="form-control bg-pulsar text-fondo" id="formGroupExampleInput" placeholder="Número de cuenta">
+                </div>
+                <div>
+                    <label class="form-label font-weight-bold ">Institución</label>
+                    <input type="text" class="form-control bg-pulsar text-fondo" id="formGroupExampleInput" placeholder="Institución">
+                </div>
+            </fieldset>
+            <div class="divBtnCerrarSesion">
+                <button class="btn btn-cancelar text-fondo" id="btnCerrarSesion"> 
+                    Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid" id="section-Salir-perfil" style="display: none;justify-content: center;">
+        <div class="card" id="card-Salir-Perfil" style="padding: 50px;">
+            <label class="form-label font-weight-bold fs-2 text-center">¿Está seguro de quierer cerrar sesión?</label>
+            <div class="divBtnCerrarAlert">
+                <button class="btn btn-pulsar text-fondo" id="btnCancelCerrar"> 
+                    Cancelar
+                </button>
+                <a href="index.html">
+                    <button class="btn btn-cancelar text-fondo" id="btnCerrarSesion2"> 
+                        Cerrar Sesión
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/functions.js"></script>
+    <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
+
+    <script>
+        let Field1 = document.getElementById('section-info-perfil');
+        let Field2 = document.getElementById('section-Salir-perfil');
+        let BtnSalir = document.getElementById('btnCerrarSesion');
+        let BtnCancelar = document.getElementById('btnCancelCerrar');
+    
+        BtnSalir.addEventListener('click', () => {
+            Field2.style.display = 'flex'; // cambia el valor de display a flex
+            Field1.style.display = 'none';
+        });
+    
+        BtnCancelar.addEventListener('click', () => {
+            Field2.style.display = 'none'; // cambia el valor de display a flex
+            Field1.style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
