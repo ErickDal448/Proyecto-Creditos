@@ -178,6 +178,16 @@ input[type="text"], input[type="password"]{
     .filtros{
         margin-top: 30px;
     }
+    #card-lista-eventosSimple{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    #lista-info-eventoSimple{
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+    }
     #card-lista-eventos{
         display: inline-flex;
         flex-direction: row;
@@ -214,10 +224,11 @@ input[type="text"], input[type="password"]{
         background-color: #E3C351;
         color: #ffffff;
         font-weight: bold;
-        width: 100px;
+        width: 160px;
     }
     .VariablesEventos{
         background-color: antiquewhite;
+        width: 100%;
     }
 
     /* Certificados */
@@ -343,6 +354,34 @@ input[type="text"], input[type="password"]{
         font-weight: bond;
     }
 
+    /* Editor */
+    /* InicioEditor */
+    #card-Editor-Inicio{
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+    #card-Editor-Inicio h4{
+        margin-bottom: 30px      ;
+    }
+    #card-Editor-Inicio section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #card-Editor-Inicio div{
+        display: flex;
+        flex-direction: column;
+        margin: 25px 5%;
+    }
+    .Quick-Eventos{
+
+    }
+    .Quick-Certificados{
+
+    }
   /* Media resposive */
 @media (min-width: 1139px){
     #Dropdown{
@@ -420,9 +459,13 @@ input[type="text"], input[type="password"]{
    /* Eventos */
    #card-lista-eventos {
     display: inline-flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     }
+    #lista-info-eventoSimple {
+        display: inline-flex;
+        flex-direction: column;
+        }
     /* Certificados */
     .filtrosCertificado{
         display: flex;
@@ -477,6 +520,9 @@ input[type="text"], input[type="password"]{
     }
 
     /* Eventos */
+    .mapa-creditos{
+        margin-left: 0px;
+    }
     .list-group-horizontal {
         flex-direction: column;
     }

@@ -9,14 +9,33 @@ function getBootstrapBundlePath() {
 }
 /* enlace al apartado inicio */
 function goToOtherFile() {
-    console.log(window.location.hostname);
-    let path = '/Inicio.html';
+  // Obtener los valores ingresados por el usuario
+  let numCuenta = document.getElementById("InputNumCuenta1").value;
+  let nip = document.getElementById("NIP1").value;
+
+  // Verificar si los valores ingresados son válidos
+  if (numCuenta === "Alumno" && nip === "Alumno") {
+      // Si los valores son válidos, redirigir al usuario a otra página
+      let path = '/Inicio.html';
+      if (window.location.hostname === 'erickdal448.github.io') {
+          path = '/Proyecto-Creditos' + path;
+      }
+      window.location.href = path;
+  } 
+  else if(numCuenta === "Editor" && nip === "Editor"){
+    // Si los valores son válidos, redirigir al usuario a otra página
+    let path = '/InicioEditor.html';
     if (window.location.hostname === 'erickdal448.github.io') {
-      path = '/Proyecto-Creditos' + path;
+        path = '/Proyecto-Creditos' + path;
     }
-    console.log(path);
     window.location.href = path;
+  }
+  else {
+      // Si los valores no son válidos, mostrar un mensaje de error
+      alert("Número de cuenta o NIP incorrecto");
+  }
 }
+
 /* coneccion con la imagen perfil */
 window.onload = function() {
 //   var path = 'Imagenes/Icon Perfil.png';
