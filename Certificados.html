@@ -93,7 +93,7 @@
 
         <section class="EventosTablas" id="Field1-5Certificados" style="display: none;"> 
             <div class="card" id="card-lista-eventos">
-                <div class="mapa-creditos col-md-2">
+                <div class="mapa-creditos col-md-2" style="margin-top: 20px;">
                     <button class="btn btn-cancelar text-fondo" id="btnReturn" onclick="regresar()" style="border-radius: 40px; width: 90px; height: 60px; margin-bottom: 30px;"> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16" style="width: 40px; height: 40px;">
                             <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
@@ -128,10 +128,6 @@
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item AtributosCertificados">Tipo</li>
                         <li class="list-group-item VariablesCertificados">{Tipo}</li>
-                    </ul>
-                    <ul class="list-group list-group-horizontal">
-                        <li class="list-group-item AtributosCertificados">Duración</li>
-                        <li class="list-group-item VariablesCertificados">{Duracion} </li>
                     </ul>
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item AtributosCertificados">Fecha</li>
@@ -222,6 +218,7 @@
     Salir.addEventListener('click', () => {
         Field2.style.display = 'none'; // cambia el valor de display a flex
         document.getElementById("card-lista-eventosSimple").style.display = "flex";
+        Field1.style.display = 'flex';
     });
 
     Enviar.addEventListener('click', () => {
