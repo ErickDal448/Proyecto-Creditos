@@ -550,7 +550,10 @@ input[type="text"], input[type="password"]{
         width: auto;
     }
 
-
+    /* Inicio Editor */
+    #card-iniciarsesion-1{
+        width: 90%;
+    }
     /* Evento Editor */
     #card-eventos-post img{
         display: none;
