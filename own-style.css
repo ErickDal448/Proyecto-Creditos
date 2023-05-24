@@ -376,11 +376,26 @@ input[type="text"], input[type="password"]{
         flex-direction: column;
         margin: 25px 5%;
     }
-    .Quick-Eventos{
 
+    /* Eventos Editor */
+    #card-eventos-post{
+        padding: 60px;
     }
-    .Quick-Certificados{
-
+    #card-eventos-post input{
+        background-color: antiquewhite;
+        border-radius: 40px;
+        border-color: #E3C351;
+    }
+    #card-eventos-post select{
+        background-color: antiquewhite;
+        border-radius: 40px;
+        border-color: #E3C351;
+        color: grey;
+        font-weight: bold;
+    }
+    #section-eventos-post-img{
+        
+        
     }
   /* Media resposive */
 @media (min-width: 1139px){
