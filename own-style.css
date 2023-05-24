@@ -549,6 +549,12 @@ input[type="text"], input[type="password"]{
     .AtributosCertificados{
         width: auto;
     }
+
+
+    /* Evento Editor */
+    #card-eventos-post img{
+        display: none;
+    }
 }
 @media (max-width: 480px){
     /* Inicio */
