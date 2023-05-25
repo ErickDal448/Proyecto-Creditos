@@ -12,6 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
 
+    <style>
+        input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+        }
+   </style>
     </head>
 <body>
     <header>
@@ -126,6 +132,7 @@
                             <li class="list-group-item AtributosEventos">Fecha</li>
                             <li class="list-group-item VariablesEventos">{Fecha}</li>
                         </ul>
+                        <button class="btn btn-pulsar text-fondo" id="btnEditar" style="margin-top: 20px;" onclick="ListPost()"> Lista de Asistencia </button>
                     </div>
                 </div>
             </section>
@@ -184,7 +191,74 @@
         </div>  
    </section>
    
+   <section id="listaAsistencia" style="display: none; align-items: center; justify-content: center;">
+        <div class="card bg-cabeza" id="card-eventos-post">
+            <div>
+                <button class="btn btn-cancelar text-fondo" id="btnReturnPost" onclick="regresarAsistencia()" style="border-radius: 40px; width: 90px; height: 60px; margin-bottom: 0px;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16" style="width: 40px; height: 40px;">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg>
+                </button>
+                <h4 class="text-fondo text-center font-weight-bold" > Lista de asistencia del evento: {Titulo Evento}</h4>
 
+            </div>
+            
+            <section style="margin-bottom: 20px; display: flex; align-items: center;">
+                <div class="col-md-5">
+                    <label for="formGroupExampleInput2" class="form-label badge bg-fondo text-wrap font-weight-bold text-dark fs-6">Grado</label>
+                    <select id="inputState" class="form-select bg-pulsar text-fondo">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label for="formGroupExampleInput2" class="form-label badge bg-fondo text-wrap font-weight-bold text-dark fs-6">Grupo</label>
+                    <select id="inputState" class="form-select bg-pulsar text-fondo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+            </section>
+            <table class="table class text-fondo">
+                <thead class="text-wrap bg-pulsar text-dark">
+                  <tr>
+                    <th scope="col" class="Numlista">#</th>
+                    <th scope="col" class="ListaNombreAlumno">Alumno</th>
+                    <th scope="col"  class="Asistencia">Asistio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="Numlista">1</th>
+                    <td class="ListaNombreAlumno ">Alba Leon Erick Daniel</td>
+                    <td class="Asistencia"><input class="form-check-input bg-cancelar" type="checkbox" value=""></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Numlista">2</th>
+                    <td class="ListaNombreAlumno ">Duarte Escareño Joshua Emanuel</td>
+                    <td class="Asistencia"><input class="form-check-input bg-cancelar" type="checkbox" value=""></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Numlista">3</th>
+                    <td class="ListaNombreAlumno ">Quintero Parra Jesús Randú</td>
+                    <td class="Asistencia">
+                        <input class="form-check-input bg-cancelar" type="checkbox">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+   </section>
+
+   
    <script src="js/functions.js"></script>
    <script>document.write('<script src="' + getBootstrapBundlePath() + '"><\/script>');</script>
    <script>
@@ -214,6 +288,36 @@
             document.getElementById("filtros").style.display = "none";
             document.getElementById("card-lista-eventos").style.display = "none";
         }
+        function ListPost(){
+            document.getElementById("listaAsistencia").style.display = "flex";
+            document.getElementById("card-lista-eventos").style.display = "none";
+            document.getElementById("card-eventos").style.display = "none";
+        }
+        function regresarAsistencia(){
+            document.getElementById("listaAsistencia").style.display = "none";
+            document.getElementById("card-lista-eventos").style.display = "flex";
+            document.getElementById("card-eventos").style.display = "flex";
+
+        }
+
+        // Obtener todos los elementos input de tipo checkbox
+        var checkboxes = document.querySelectorAll('table input[type="checkbox"]');
+
+        // Agregar un event listener a cada checkbox
+        checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            // Si el checkbox está activo, agregar la clase 'active' y eliminar la clase 'inactive'
+            if (this.checked) {
+            this.classList.add('bg-pulsar');
+            this.classList.remove('bg-cancelar');
+            }
+            // Si el checkbox está desactivo, agregar la clase 'inactive' y eliminar la clase 'active'
+            else {
+            this.classList.add('bg-cancelar');
+            this.classList.remove('bg-pulsar');
+            }
+        });
+        });
    </script>
 </body>
 </html>
